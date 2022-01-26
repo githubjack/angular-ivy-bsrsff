@@ -14,16 +14,22 @@ constructor () {}
 
 ngOnInit(): void {
 this.todos = [
-  {
-    content: 'First Todo',
-    completed: false,
-  },
-  {
-    content: 'Second Todo',
-    completed: false
-  }
-]
-//  throw new Error('Method not implemented.');
+    {
+      content: 'First Todo',
+      completed: false,
+    },
+    {
+      content: 'Second Todo',
+      completed: false
+    }
+  ]
+}
+
+toggleDone (id) {
+this.todos.map((v, i) => {
+  if(i == id) v.completed = !v.completed;
+  return v;
+})
 }
 
 }
