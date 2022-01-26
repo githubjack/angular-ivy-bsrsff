@@ -9,6 +9,7 @@ import { Todo } from './../../models/Todo';
 
 export class TodosComponent implements OnInit {
 todos:Todo[];
+inputTodo:string = '';
 
 constructor () {}
 
