@@ -3,6 +3,6 @@
        class="todo {{ (todo.completed ? 'done' : '') }}">
     <div class="id">{{ i }}</div>
     <div class="content" (click)="toggleDone(i)">{{ todo.content }}</div>
-    <button class="remove">Delete</button>
+    <button class="remove" (click)="deleteTodo(i)">Delete</button>
   </div>
 </div>
