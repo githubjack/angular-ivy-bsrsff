@@ -52,10 +52,5 @@ editTodo () {
 
   }
 }
-/*
- set userName(val: string) {
-    //do some extra work here
-    this._userName = val;
-  }
-  */
+
 }
