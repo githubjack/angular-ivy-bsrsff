@@ -1,3 +1,14 @@
+
+.todos{
+  display:flex;
+  flex-direction:column;
+  max-width:640px;
+  margin:3em;
+  padding:1.5em;
+  background-color:white;
+  border-radius:0.25em;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
 .todo {
 	display: flex;
 	padding: 10px 15px;
@@ -36,9 +47,7 @@
   padding-right:1em;
 }
 .todo-input {
-/*	display: block; */
   display:inline-flex;
-/*	width: 100%; */
   flex:.75;
 	padding: 10px 15px;
 	appearance: none;
@@ -55,7 +64,7 @@
   margin-left:1em;
   margin-top:1.5em;
   height:2.4em;
-  width:2em;
+  width:2.4em;
 	appearance: none;
 	border: 1px solid  #FE4880;
   border-radius:100%;
@@ -96,6 +105,7 @@
 	max-width: 200px;
 	appearance: none;
 	border: none;
+  border-radius:0.25em;
 	outline: none;
 	background: none;
 
