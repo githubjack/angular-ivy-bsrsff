@@ -27,17 +27,23 @@
 
   <div *ngFor="let todo of todos; let i = index;"
        class="todo {{ (todo.completed ? 'done' : '') }}">
-
+  <div class="todo-update">
     <div class="id">{{ i }}</div>
-    <div class="content"
-         (click)="toggleDone(i)">{{ todo.content }}
+    <div class="content">
+       <input type="text"
+         (click)="toggleDone(i)"
+         [value]="[todo.content]"
+         />
     </div>
+  </div>
     <button class="todo-remove" 
             (click)="deleteTodo(i)">Delete
     </button>
-    <button class="todo-edit"
-            (click)="editTodo()">Edit
-    </button>
+    <input type=button 
+           class="todo-edit"
+           value="Edit"
+           
+      />
 
   </div>
 

@@ -10,6 +10,7 @@ import { Todo } from './../../models/Todo';
 export class TodosComponent implements OnInit {
 todos:Todo[];
 inputTodo:string = '';
+updateInput: string = '';
 
 constructor () {}
 
@@ -46,7 +47,11 @@ this.inputTodo = '';
 }
 
 editTodo () {
-  
+  this.todos.push({
+    content: this.updateInput,
+    completed:false,
+  });
+  this.updateInput = '';
 }
 
 }
