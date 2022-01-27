@@ -47,11 +47,9 @@ this.inputTodo = '';
 }
 
 editTodo () {
-  this.todos.push({
-    content: this.updateInput,
-    completed:false,
-  });
-  this.updateInput = '';
+  if(this.todos){
+    console.log('todo clicked');
+  }
 }
 
 }
