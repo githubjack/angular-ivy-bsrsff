@@ -1,3 +1,14 @@
-p {
-  font-family: Lato;
+.app {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:flex-start;
+  height:100vh;
+}
+.app header{
+  width:fit-content;
+  padding:2em 2em 0 2em;
+}
+.app header h1{
+  border-bottom: 1px solid  #FE4880;
 }

@@ -24,10 +24,17 @@
 .todo.done .content {
 	text-decoration: line-through;
 }
-
+.todo-inline{
+  display:flex;
+  align-items:center;
+  width:auto;
+  padding-right:1em;
+}
 .todo-input {
-	display: block;
-	width: 100%;
+/*	display: block; */
+  display:inline-flex;
+/*	width: 100%; */
+  flex:.75;
 	padding: 10px 15px;
 	appearance: none;
 	border: none;
@@ -36,7 +43,47 @@
 	font-size: 20px;
 	outline: none;
 }
-
+.todo-order{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-left:1em;
+  margin-top:1.5em;
+  height:3.25em;
+	appearance: none;
+	border: 1px solid  #FE4880;
+  border-radius:0.25em;
+	outline: none;
+	background: none;
+	padding: 6px 8px;
+	background-color:white;
+  color: #121212;
+  font-size:0.6rem;
+  font-weight:800;
+}
+.todo-edit{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-left:1em;
+	appearance: none;
+	border: none;
+  border-radius:0.25em;
+	outline: none;
+	background: none;
+	padding: 10px 15px;
+	background-color: #FE4880;
+  color:white;
+  font-size:0.8rem;
+}
+.todo-remove {
+  background-color:white;
+  border: 1px solid  #FE4880;
+  border-radius:0.25em;
+  font-size: 0.9rem;
+  font-weight:500;
+  color:dimgrey
+}
 .todo-submit {
 	display: block;
 	width: 100%;

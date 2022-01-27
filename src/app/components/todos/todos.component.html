@@ -1,15 +1,27 @@
 <div class="todos">
 
-  <form>
+  <form (submit)="addTodo()">
+    <div class="todo-inline">
     <input type="text"
            name="inputTodo"
            placeholder="Enter Todo ..."
            class="todo-input"
            [(ngModel)]="inputTodo"
           />
+    <input type="button"
+           name="order-up"
+           value="up"
+           class="todo-order asc"
+           />
+    <input type="button"
+           name="order-down"
+           value="down"
+           class="todo-order dsc"
+           />
+    </div>
     <input type="submit"
            value="Save Todo"
-           class="=todo-submit" 
+           class="todo-submit" 
                 />
   </form>
 
@@ -20,10 +32,13 @@
     <div class="content"
          (click)="toggleDone(i)">{{ todo.content }}
     </div>
-    <button class="remove" 
+    <button class="todo-remove" 
             (click)="deleteTodo(i)">Delete
     </button>
-    
+    <button class="todo-edit"
+            (click)="editTodo()">Edit
+    </button>
+
   </div>
 
 </div>
