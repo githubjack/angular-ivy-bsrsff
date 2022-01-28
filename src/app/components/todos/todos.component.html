@@ -8,6 +8,7 @@
            class="todo-input"
            [(ngModel)]="inputTodo"
           />
+          <!--
     <input type="button"
            name="order-up"
            value="&#8593;"
@@ -18,11 +19,13 @@
            value="&#8595;"
            class="todo-order dsc"
            />
+          -->
+          <input type="submit"
+          value="Save Todo"
+          class="todo-submit" 
+               />
     </div>
-    <input type="submit"
-           value="Save Todo"
-           class="todo-submit" 
-                />
+
   </form>
 
   <div *ngFor="let todo of todos; let i = index;"
@@ -33,6 +36,7 @@
        <input type="text"
          (click)="toggleDone(i)"
          [(ngModel)]="todo.content"
+         value="{{newContent}}"
          />
     </div>
   </div>
@@ -42,7 +46,8 @@
     <input type=button 
            class="todo-edit"
            value="Edit"
-           (click)="editTodo()"
+           (click)="onEdit(todo)"
+           
       />
 
   </div>

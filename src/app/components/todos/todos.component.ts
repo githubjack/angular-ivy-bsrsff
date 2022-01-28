@@ -10,17 +10,20 @@ import { Todo } from './../../models/Todo';
 export class TodosComponent implements OnInit {
 todos:Todo[];
 inputTodo:string = '';
-updateInput: string = '';
+todo: string;
+newContent: string = '';
 
 constructor () {}
 
 ngOnInit(): void {
 this.todos = [
     {
+      id: 0,
       content: 'First Todo',
       completed: false,
     },
     {
+      id: 1,
       content: 'Second Todo',
       completed: false
     }
@@ -40,16 +43,18 @@ deleteTodo (id:number) {
 
 addTodo () {
 this.todos.push({
+  id: 0,
   content: this.inputTodo,
   completed: false,
 });
 this.inputTodo = '';
 }
 
-editTodo () {
+onEdit (todo) {
   if(this.todos){
-    console.log('todo clicked');
-
+    console.log('todo clicked!', todo.content);
+    todo.content = this.newContent;
+    console.log('new content', this.newContent)
   }
 }
 
